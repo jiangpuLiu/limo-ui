@@ -1,0 +1,6 @@
+{
+  "name": "@limo-ui/constants",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts"
+}

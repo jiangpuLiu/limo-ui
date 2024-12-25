@@ -1,0 +1,5 @@
+export const PKG_PREFIX = '@limo-ui'
+export const PKG_NAME = 'limo-ui'
+export const PKG_CAMELCASE_NAME = 'LimoUi'
+export const PKG_CAMELCASE_LOCAL_NAME = 'LimoUiLocale'
+export const PKG_BRAND_NAME = 'Limo UI'
