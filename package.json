@@ -8,7 +8,6 @@
   ],
   "scripts": {
     "cz": "czg",
-    "commit": "git pull && git add -A && git-czg && git push",
     "prepare:e2e": "if [ ! -d \"docs/.vitepress/dist\" ]; then pnpm run docs:build; fi;",
     "dev": "pnpm -C play dev",
     "gen": "bash ./scripts/gc.sh",
@@ -62,8 +61,7 @@
     "normalize-wheel-es": "^1.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.6.1",
-    "@commitlint/config-conventional": "^18.6.3",
+    "@commitlint/config-conventional": "^19.6.0",
     "@esbuild-kit/cjs-loader": "^2.2.1",
     "@limo-ui/build": "workspace:*",
     "@limo-ui/build-utils": "workspace:*",
@@ -83,6 +81,7 @@
     "chalk": "^5.0.1",
     "concurrently": "^7.2.2",
     "consola": "^2.15.3",
+    "cross-env": "^7.0.3",
     "csstype": "^2.6.20",
     "cz-git": "^1.3.8",
     "czg": "^1.3.8",
@@ -113,7 +112,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-git"
+      "path": "./node_modules/cz-git"
     }
   },
   "pnpm": {

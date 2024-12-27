@@ -1,5 +1,6 @@
 import { execSync } from 'child_process'
 import fg from 'fast-glob'
+import { defineConfig } from 'cz-git'
 
 const getPackages = (packagePath) =>
   fg.sync('*', { cwd: packagePath, onlyDirectories: true })
@@ -40,7 +41,7 @@ const subjectComplete = gitStatus
   ?.replace(/\//g, '%%')
   ?.match(/packages%%components%%((\w|-)*)/)?.[1]
 
-export default {
+export default defineConfig({
   extends: ['@commitlint/config-conventional'],
   rules: {
     /**
@@ -140,4 +141,4 @@ export default {
     allowCustomIssuePrefixs: false,
     allowEmptyIssuePrefixs: false,
   },
-}
+})
