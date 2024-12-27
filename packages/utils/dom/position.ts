@@ -1,4 +1,4 @@
-import { isClient } from '../browser'
+import { isClient } from '../tools/browser'
 
 export const isInContainer = (
   el?: Element,

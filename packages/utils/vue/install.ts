@@ -1,4 +1,4 @@
-import { NOOP } from '../functions'
+import { NOOP } from '../tools/functions'
 
 import type { App, Directive } from 'vue'
 import type { SFCInstallWithContext, SFCWithInstall } from './typescript'

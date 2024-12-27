@@ -38,7 +38,7 @@ cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
 import { ${PROP_NAME}Emits, ${PROP_NAME}Props } from './$INPUT_NAME'
 
 defineOptions({
-  name: 'El$NAME',
+  name: 'Lm$NAME',
 })
 
 const props = defineProps(${PROP_NAME}Props)
@@ -71,8 +71,8 @@ import { withInstall } from '@limo-ui/utils'
 import $NAME from './src/$INPUT_NAME.vue'
 import type { SFCWithInstall } from '@limo-ui/utils'
 
-export const El$NAME: SFCWithInstall<typeof $NAME> = withInstall($NAME)
-export default El$NAME
+export const Lm$NAME: SFCWithInstall<typeof $NAME> = withInstall($NAME)
+export default Lm$NAME
 
 export * from './src/$INPUT_NAME'
 export type { ${NAME}Instance } from './src/instance'
@@ -111,4 +111,4 @@ perl -0777 -pi -e "s/\n\n/\nexport * from '.\/$INPUT_NAME'\n\n/" $FILE_PATH/comp
 
 TYPE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../typings" && pwd)
 
-perl -0777 -pi -e "s/\n\s+}/\n    El$NAME: typeof import('limo-ui')['El$NAME']\n  }/" $TYPE_PATH/global.d.ts
+perl -0777 -pi -e "s/\n\s+}/\n    Lm$NAME: typeof import('limo-ui')['Lm$NAME']\n  }/" $TYPE_PATH/global.d.ts

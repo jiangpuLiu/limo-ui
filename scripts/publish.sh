@@ -3,7 +3,7 @@
 set -e
 
 pnpm i --frozen-lockfile
-pnpm update:version
+#pnpm update:version
 
 pnpm build
 

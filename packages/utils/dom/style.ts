@@ -1,8 +1,8 @@
-import { isNumber, isObject, isString, isStringNumber } from '../types'
-import { isClient } from '../browser'
-import { camelize } from '../strings'
-import { entriesOf, keysOf } from '../objects'
-import { debugWarn } from '../error'
+import { isNumber, isObject, isString, isStringNumber } from '../tools/types'
+import { isClient } from '../tools/browser'
+import { camelize } from '../tools/strings'
+import { entriesOf, keysOf } from '../tools/objects'
+import { debugWarn } from '../tools/error'
 import type { CSSProperties } from 'vue'
 
 const SCOPE = 'utils/dom/style'

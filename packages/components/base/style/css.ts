@@ -1,1 +1,1 @@
-import '@element-plus/theme-chalk/base.css'
+import '@limo-ui/theme/base.css'
