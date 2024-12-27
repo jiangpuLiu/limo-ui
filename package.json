@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "commit": "lint-staged && pnpm cz",
+    "publish": "./scripts/publish.sh",
     "cz": "czg",
     "prepare:e2e": "if [ ! -d \"docs/.vitepress/dist\" ]; then pnpm run docs:build; fi;",
     "dev": "pnpm -C play dev",
