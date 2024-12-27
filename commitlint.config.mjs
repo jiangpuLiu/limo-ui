@@ -42,7 +42,6 @@ const subjectComplete = gitStatus
   ?.match(/packages%%components%%((\w|-)*)/)?.[1]
 
 export default defineConfig({
-  extends: ['@commitlint/config-conventional'],
   rules: {
     /**
      * type[scope]: [function] description

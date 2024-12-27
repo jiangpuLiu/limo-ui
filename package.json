@@ -7,7 +7,7 @@
     "docs"
   ],
   "scripts": {
-    "commit": "lint-staged && pnpm cz",
+    "commit": "git add . && pnpm run cz",
     "publish": "./scripts/publish.sh",
     "cz": "czg",
     "prepare:e2e": "if [ ! -d \"docs/.vitepress/dist\" ]; then pnpm run docs:build; fi;",
@@ -131,6 +131,6 @@
     }
   },
   "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
+    "*.{vue,js,ts,jsx,tsx,md,json,mjs}": "eslint --fix"
   }
 }
