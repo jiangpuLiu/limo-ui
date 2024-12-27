@@ -1,5 +1,5 @@
-import { isString } from '../types'
-import { isClient } from '../browser'
+import { isString } from '../tools/types'
+import { isClient } from '../tools/browser'
 
 type GetElement = <T extends string | HTMLElement | Window | null | undefined>(
   target: T

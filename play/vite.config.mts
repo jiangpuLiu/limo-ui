@@ -3,7 +3,7 @@ import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import {LimoUIResolver} from './resolever/limo-ui'
 import Inspect from 'vite-plugin-inspect'
 import mkcert from 'vite-plugin-mkcert'
 import glob from 'fast-glob'
@@ -64,10 +64,9 @@ export default defineConfig(async ({ mode }) => {
       }),
       Components({
         include: `${__dirname}/**`,
-        // resolvers: ElementPlusResolver({
-        //   version:  '2.0.0-dev.1',
-        //   importStyle: 'sass',
-        // }),
+        resolvers: LimoUIResolver({
+          importStyle: 'sass', // 自动导入 CSS 样式
+        }),
         dts: false,
       }),
       mkcert(),

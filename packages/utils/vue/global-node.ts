@@ -1,4 +1,4 @@
-import { isClient } from '../browser'
+import { isClient } from '../tools/browser'
 
 const globalNodes: HTMLElement[] = []
 let target: HTMLElement | undefined = !isClient ? undefined : document.body

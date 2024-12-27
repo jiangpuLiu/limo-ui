@@ -7,10 +7,10 @@ import {
   isVNode,
   openBlock,
 } from 'vue'
-import { camelize } from '../strings'
-import { isArray } from '../types'
-import { hasOwn } from '../objects'
-import { debugWarn } from '../error'
+import { camelize } from '../tools/strings'
+import { isArray } from '../tools/types'
+import { hasOwn } from '../tools/objects'
+import { debugWarn } from '../tools/error'
 import type {
   VNode,
   VNodeArrayChildren,

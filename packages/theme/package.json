@@ -27,8 +27,8 @@
     "build": "gulp --require @esbuild-kit/cjs-loader"
   },
   "devDependencies": {
-    "@limo-ui/build": "workspace:*",
     "@esbuild-kit/cjs-loader": "^2.2.1",
+    "@limo-ui/build": "workspace:*",
     "@types/gulp-autoprefixer": "^0.0.33",
     "@types/gulp-rename": "^2.0.1",
     "@types/gulp-sass": "^5.0.0",
@@ -37,6 +37,5 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^6.0.0",
     "postcss": "^8.4.35"
-  },
-  "gitHead": "c69724230befa8fede0e6b9c37fb0b7e39fd7cdd"
+  }
 }

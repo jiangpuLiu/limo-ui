@@ -1,7 +1,7 @@
-import { isClient } from '../browser'
-import { easeInOutCubic } from '../easings'
-import { isFunction, isWindow } from '../types'
-import { cAF, rAF } from '../raf'
+import { isClient } from '../tools/browser'
+import { easeInOutCubic } from '../tools/easings'
+import { isFunction, isWindow } from '../tools/types'
+import { cAF, rAF } from '../tools/raf'
 import { getStyle } from './style'
 
 export const isScroll = (el: HTMLElement, isVertical?: boolean): boolean => {
