@@ -406,18 +406,6 @@ importers:
       '@ctrl/tinycolor':
         specifier: ^3.4.1
         version: 3.6.1
-      '@floating-ui/dom':
-        specifier: ^1.0.1
-        version: 1.6.12
-      '@popperjs/core':
-        specifier: npm:@sxzz/popperjs-es@^2.11.7
-        version: '@sxzz/popperjs-es@2.11.7'
-      '@types/lodash':
-        specifier: ^4.14.182
-        version: 4.17.13
-      '@types/lodash-es':
-        specifier: ^4.17.6
-        version: 4.17.12
       '@vueuse/core':
         specifier: ^9.1.0
         version: 9.13.0(vue@3.5.13(typescript@5.5.4))
@@ -427,37 +415,9 @@ importers:
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
-      escape-html:
-        specifier: ^1.0.3
-        version: 1.0.3
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
-      lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
-      lodash-unified:
-        specifier: ^1.0.2
-        version: 1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.21)(lodash@4.17.21)
-      memoize-one:
-        specifier: ^6.0.0
-        version: 6.0.0
-      normalize-wheel-es:
-        specifier: ^1.2.0
-        version: 1.2.0
-    devDependencies:
-      '@types/node':
-        specifier: '*'
-        version: 22.10.2
-      csstype:
-        specifier: ^2.6.20
-        version: 2.6.21
       vue:
-        specifier: ^3.2.37
+        specifier: ^3.2.0
         version: 3.5.13(typescript@5.5.4)
-      vue-router:
-        specifier: ^4.0.16
-        version: 4.5.0(vue@3.5.13(typescript@5.5.4))
 
   packages/theme:
     devDependencies:
