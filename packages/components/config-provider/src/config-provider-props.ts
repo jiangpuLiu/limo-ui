@@ -62,7 +62,7 @@ export const configProviderProps = buildProps({
    */
   namespace: {
     type: String,
-    default: 'el',
+    default: 'lm',
   },
   ...useEmptyValuesProps,
 } as const)

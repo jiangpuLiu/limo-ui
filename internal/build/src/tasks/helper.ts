@@ -19,7 +19,7 @@ import type { TaskFunction } from 'gulp'
 import type {
   ReAttribute,
   ReComponentName,
-  ReDocUrl,
+  // ReDocUrl,
   ReWebTypesSource,
   ReWebTypesType,
 } from 'components-helper'
@@ -33,20 +33,20 @@ const removeTag = (str: string) => {
 }
 
 const reComponentName: ReComponentName = (title) => {
-  return `el-${hyphenate(removeTag(title)).replace(/[ ]+/g, '-')}`
+  return `lm-${hyphenate(removeTag(title)).replace(/[ ]+/g, '-')}`
 }
 
-const reDocUrl: ReDocUrl = (fileName, header) => {
-  const docs = 'https://limo-ui.org/en-US/component/'
-  const _header = header
-    ? removeTag(header).replaceAll(/\s+/g, '-').toLowerCase()
-    : ''
-
-  return `${docs}${fileName}.html${_header ? '#' : ''}${_header}`
-}
+// const reDocUrl: ReDocUrl = (fileName, header) => {
+//   const docs = 'https://limo-ui.org/component/'
+//   const _header = header
+//     ? removeTag(header).replaceAll(/\s+/g, '-').toLowerCase()
+//     : ''
+//
+//   return `${docs}${fileName}.html${_header ? '#' : ''}${_header}`
+// }
 
 const reWebTypesSource: ReWebTypesSource = (title) => {
-  const symbol = `El${removeTag(title)
+  const symbol = `Lm${removeTag(title)
     .replaceAll(/-/g, ' ')
     .replaceAll(/^\w|\s+\w/g, (item) => {
       return item.trim().toUpperCase()
@@ -94,8 +94,8 @@ const reAttribute: ReAttribute = (value, key) => {
       : str.replaceAll(/`/g, '').replaceAll(/\([^)]*\)(?!\s*=>)/g, '')
   } else if (key === 'Subtags') {
     return str
-      ? `el-${str
-          .replaceAll(/\s*\/\s*/g, '/el-')
+      ? `lm-${str
+          .replaceAll(/\s*\/\s*/g, '/lm-')
           .replaceAll(/\B([A-Z])/g, '-$1')
           .replaceAll(/\s+/g, '-')
           .toLowerCase()}`
@@ -200,7 +200,7 @@ export const buildHelper: TaskFunction = (done) => {
     : version!
   let entry = `${path.resolve(
     projRoot,
-    'docs/en-US/component'
+    'docs/component'
   )}/!(datetime-picker|message-box|message).md`
   if (os.platform() === 'win32') {
     entry = entry.replace(/\\/g, '/')
@@ -212,7 +212,7 @@ export const buildHelper: TaskFunction = (done) => {
     entry,
     outDir: epOutput,
     reComponentName,
-    reDocUrl,
+    // reDocUrl,
     reWebTypesSource,
     reAttribute,
     reWebTypesType,

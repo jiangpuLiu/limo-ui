@@ -1,5 +1,5 @@
-import { ElMessage } from '@limo-ui/components/message'
+import { LmMessage } from '@limo-ui/components/message'
 
 import type { Plugin } from 'vue'
 
-export default [ElMessage] as Plugin[]
+export default [LmMessage] as Plugin[]

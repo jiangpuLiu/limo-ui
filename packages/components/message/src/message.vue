@@ -52,7 +52,7 @@ import { messageEmits, messageProps } from './message'
 import { getLastOffset, getOffsetOrSpace } from './instance'
 
 defineOptions({
-  name: 'ElMessage',
+  name: 'LmMessage',
 })
 
 const props = defineProps(messageProps)

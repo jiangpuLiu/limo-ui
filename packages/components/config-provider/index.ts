@@ -3,9 +3,9 @@ import { withInstall } from '@limo-ui/utils'
 import ConfigProvider from './src/config-provider'
 import type { SFCWithInstall } from '@limo-ui/utils'
 
-export const ElConfigProvider: SFCWithInstall<typeof ConfigProvider> =
+export const LmConfigProvider: SFCWithInstall<typeof ConfigProvider> =
   withInstall(ConfigProvider)
-export default ElConfigProvider
+export default LmConfigProvider
 
 export * from './src/config-provider'
 export * from './src/config-provider-props'

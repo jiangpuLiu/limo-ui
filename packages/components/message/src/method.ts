@@ -48,7 +48,7 @@ const normalizeOptions = (params?: MessageParams) => {
     // should fallback to default value with a warning
     if (!isElement(appendTo)) {
       debugWarn(
-        'ElMessage',
+        'LmMessage',
         'the appendTo option is not an HTMLElement. Falling back to document.body.'
       )
       appendTo = document.body

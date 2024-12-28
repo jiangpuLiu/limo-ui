@@ -58,7 +58,7 @@ export const useFormItemInputId = (
     )
   })
 
-  // Generate id for ElFormItem label if not provided as prop
+  // Generate id for LmFormItem label if not provided as prop
   onMounted(() => {
     idUnwatch = watch(
       [toRef(props, 'id'), disableIdGeneration] as any,
