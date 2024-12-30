@@ -1,6 +1,6 @@
 {
   "name": "limo-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Component Library for Vue 3",
   "keywords": [
     "limo-ui",
@@ -69,10 +69,10 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^3.4.1",
-    "@vueuse/core": "^9.1.0",
-    "async-validator": "^4.2.5",
-    "dayjs": "^1.11.13"
+    "@ctrl/tinycolor": "3.4.1",
+    "@vueuse/core": "9.1.0",
+    "async-validator": "4.2.5",
+    "dayjs": "1.11.13"
   },
   "vetur": {
     "tags": "tags.json",

@@ -1,6 +1,6 @@
 import { computed, inject, unref } from 'vue'
-import { buildProp } from '@limo-ui/utils'
 import { componentSizes } from '@limo-ui/constants'
+import { buildProp } from '@limo-ui/utils'
 
 import type { InjectionKey, Ref } from 'vue'
 import type { ComponentSize } from '@limo-ui/constants'

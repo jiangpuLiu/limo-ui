@@ -3,8 +3,42 @@
   "version": "0.0.1",
   "description": "Limo Ui directives",
   "license": "MIT",
-  "main": "index.ts",
-  "module": "index.ts",
+  "author": "liujiangpu",
+  "files": [
+    "dist"
+  ],
+  "main": "src/index.ts",
+  "module": "src/index.ts",
   "unpkg": "index.js",
-  "jsdelivr": "index.js"
+  "jsdelivr": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsup src --dts --tsconfig ./tsconfig.build.json",
+    "dev": "tsup src --watch --tsconfig ./tsconfig.build.json",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@limo-ui/constants": "^0.0.1",
+    "@limo-ui/utils": "^0.0.1",
+    "@vueuse/core": "^9.1.0",
+    "normalize-wheel-es": "^1.2.0",
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "clean-package": "^2.2.0"
+  },
+  "clean-package": "../../clean-package.json",
+  "tsup": {
+    "clean": true,
+    "target": "es2018",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
 }
