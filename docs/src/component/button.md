@@ -3,7 +3,7 @@ title: Button 按钮
 lang: zh-CN
 ---
 
-# Button 按钮
+# Button
 
 常用的操作按钮。
 
