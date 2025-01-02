@@ -1,5 +1,5 @@
 <template>
-  <!-- If you want to apply a custom namespace, uncomment the following and apply the css configuration in `vite.config.ts`. -->
+  <!-- If you want to apply a custom namespace, uncomment the following and apply the css configuration in `vite.config.mts`. -->
   <!-- <el-config-provider namespace="ep"> -->
   <div class="play-container">
     <LmButton>擦路上的风景</LmButton>

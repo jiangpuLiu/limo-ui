@@ -1,0 +1,20 @@
+// 添加公共样式的地方
+:root {
+  --text-color: var(--el-text-color-primary);
+  --text-color-light: var(--el-text-color-regular);
+  --text-color-lighter: var(--el-text-color-secondary);
+  //--vp-sidebar-width: 200px;
+  --vp-layout-max-width: 90%;
+}
+//.VPContent.has-sidebar{
+//  padding-right: unset !important;
+//}
+//.VPNavBar.has-sidebar .title{
+//  padding-left: 20px !important;
+//}
+//.VPSidebar{
+//  padding-left: 40px !important;
+//}
+.VPDoc.has-aside .content-container{
+  max-width: 100% !important;
+}
