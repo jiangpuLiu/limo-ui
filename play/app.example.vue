@@ -3,6 +3,7 @@
   <!-- <el-config-provider namespace="ep"> -->
   <div class="play-container">
     <LmButton>擦路上的风景</LmButton>
+    <LmIcon name="edit" />
     <div v-loading="true" />
   </div>
   <!-- </el-config-provider> -->

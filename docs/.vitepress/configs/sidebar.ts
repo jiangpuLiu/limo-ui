@@ -7,6 +7,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
   },
   {
     text: '组件',
-    items: [{ text: 'Button 按钮', link: '/src/component/button.md' }],
+    items: [
+      { text: 'Button 按钮', link: '/src/component/button.md' },
+      { text: 'Icon 图标', link: '/src/component/icon.md' },
+    ],
   },
 ]

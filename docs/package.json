@@ -14,7 +14,6 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.0",
     "element-plus": "2.9.0",
-    "limo-ui": "latest",
     "markdown-it": "^13.0.1",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
@@ -23,13 +22,11 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@tweenjs/tween.js": "^24.0.0",
     "@types/markdown-it": "^12.2.3",
     "kleur": "4.1.5",
+    "limo-ui": "^0.0.5",
     "markdown-it-container": "^3.0.0",
     "prismjs": "^1.28.0",
-    "three": "^0.171.0",
-    "vitepress": "1.3.2",
-    "voxel-grid": "^1.0.0"
+    "vitepress": "1.3.2"
   }
 }

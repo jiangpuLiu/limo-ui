@@ -1,5 +1,6 @@
 import type { ComponentInfo, ComponentResolver, SideEffectsInfo } from 'unplugin-vue-components/types'
-
+import { existsSync } from 'fs'
+import path from 'path'
 function kebabCase(key: string) {
   const result = key.replace(/([A-Z])/g, ' $1').trim()
   return result.split(' ').join('-').toLowerCase()
@@ -45,15 +46,33 @@ function getSideEffects(dirName: string, options: LimoUIResolverOptionsResolved)
   const themeFolder = nightly ? '@limo-ui/nightly/theme' : 'limo-ui/theme'
   const esComponentsFolder = nightly ? '@limo-ui/nightly/es/components' : 'limo-ui/es/components'
 
+
+
+  const getFilePath = (folder: string, fileName: string) => path.resolve(folder, fileName)
+
   if (importStyle === 'sass') {
-    return ssr
-      ? [`${themeFolder}/src/base.scss`, `${themeFolder}/src/${dirName}.scss`]
-      : [`${esComponentsFolder}/base/style/index`, `${esComponentsFolder}/${dirName}/style/index`]
+    const baseFile = ssr
+      ? `${themeFolder}/src/base.scss`
+      : `${esComponentsFolder}/base/style/index`
+    const componentFile = ssr
+      ? `${themeFolder}/src/${dirName}.scss`
+      : `${esComponentsFolder}/${dirName}/style/index`
+
+    if (existsSync(getFilePath(themeFolder, `src/base.scss`)) && existsSync(getFilePath(themeFolder, `src/${dirName}.scss`))) {
+      return [baseFile, componentFile]
+    }
   }
   else if (importStyle === true || importStyle === 'css') {
-    return ssr
-      ? [`${themeFolder}/base.css`, `${themeFolder}/el-${dirName}.css`]
-      : [`${esComponentsFolder}/base/style/css`, `${esComponentsFolder}/${dirName}/style/css`]
+    const baseFile = ssr
+      ? `${themeFolder}/base.css`
+      : `${esComponentsFolder}/base/style/css`
+    const componentFile = ssr
+      ? `${themeFolder}/lm-${dirName}.css`
+      : `${esComponentsFolder}/${dirName}/style/css`
+
+    if (existsSync(getFilePath(themeFolder, 'base.css')) && existsSync(getFilePath(themeFolder, `lm-${dirName}.css`))) {
+      return [baseFile, componentFile]
+    }
   }
 }
 
