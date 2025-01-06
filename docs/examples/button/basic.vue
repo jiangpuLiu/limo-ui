@@ -25,24 +25,12 @@
     <lm-button type="warning" round>Warning</lm-button>
     <lm-button type="danger" round>Danger</lm-button>
   </el-row>
-
-  <el-row>
-    <lm-button :icon="Search" circle />
-    <lm-button type="primary" :icon="Edit" circle />
-    <lm-button type="success" :icon="Check" circle />
-    <lm-button type="info" :icon="Message" circle />
-    <lm-button type="warning" :icon="Star" circle />
-    <lm-button type="danger" :icon="Delete" circle />
-  </el-row>
 </template>
 
-<script lang="ts" setup>
-import {
-  Check,
-  Delete,
-  Edit,
-  Message,
-  Search,
-  Star,
-} from '@element-plus/icons-vue'
-</script>
+<script lang="ts" setup></script>
+
+<style lang="scss" scoped>
+.mb-4 {
+  margin-bottom: 10px;
+}
+</style>

@@ -1,4 +1,8 @@
-import type { ComponentInfo, ComponentResolver, SideEffectsInfo } from 'unplugin-vue-components/types'
+import type {
+  ComponentInfo,
+  ComponentResolver,
+  SideEffectsInfo,
+} from 'unplugin-vue-components/types'
 import { existsSync } from 'fs'
 import path from 'path'
 function kebabCase(key: string) {
@@ -31,24 +35,28 @@ export interface LimoUIResolverOptions {
   /**
    * 无样式组件列表
    */
-  noStylesComponents?: string[],
+  noStylesComponents?: string[]
 
   nightly?: boolean
 }
 
-
-type LimoUIResolverOptionsResolved = Required<Omit<LimoUIResolverOptions, 'exclude'>> &
+type LimoUIResolverOptionsResolved = Required<
+  Omit<LimoUIResolverOptions, 'exclude'>
+> &
   Pick<LimoUIResolverOptions, 'exclude'>
 
-
-function getSideEffects(dirName: string, options: LimoUIResolverOptionsResolved): SideEffectsInfo | undefined {
+function getSideEffects(
+  dirName: string,
+  options: LimoUIResolverOptionsResolved
+): SideEffectsInfo | undefined {
   const { importStyle, ssr, nightly } = options
   const themeFolder = nightly ? '@limo-ui/nightly/theme' : 'limo-ui/theme'
-  const esComponentsFolder = nightly ? '@limo-ui/nightly/es/components' : 'limo-ui/es/components'
+  const esComponentsFolder = nightly
+    ? '@limo-ui/nightly/es/components'
+    : 'limo-ui/es/components'
 
-
-
-  const getFilePath = (folder: string, fileName: string) => path.resolve(folder, fileName)
+  const getFilePath = (folder: string, fileName: string) =>
+    path.resolve(folder, fileName)
 
   if (importStyle === 'sass') {
     const baseFile = ssr
@@ -58,11 +66,13 @@ function getSideEffects(dirName: string, options: LimoUIResolverOptionsResolved)
       ? `${themeFolder}/src/${dirName}.scss`
       : `${esComponentsFolder}/${dirName}/style/index`
 
-    if (existsSync(getFilePath(themeFolder, `src/base.scss`)) && existsSync(getFilePath(themeFolder, `src/${dirName}.scss`))) {
+    if (
+      existsSync(getFilePath(themeFolder, `src/base.scss`)) &&
+      existsSync(getFilePath(themeFolder, `src/${dirName}.scss`))
+    ) {
       return [baseFile, componentFile]
     }
-  }
-  else if (importStyle === true || importStyle === 'css') {
+  } else if (importStyle === true || importStyle === 'css') {
     const baseFile = ssr
       ? `${themeFolder}/base.css`
       : `${esComponentsFolder}/base/style/css`
@@ -70,7 +80,10 @@ function getSideEffects(dirName: string, options: LimoUIResolverOptionsResolved)
       ? `${themeFolder}/lm-${dirName}.css`
       : `${esComponentsFolder}/${dirName}/style/css`
 
-    if (existsSync(getFilePath(themeFolder, 'base.css')) && existsSync(getFilePath(themeFolder, `lm-${dirName}.css`))) {
+    if (
+      existsSync(getFilePath(themeFolder, 'base.css')) &&
+      existsSync(getFilePath(themeFolder, `lm-${dirName}.css`))
+    ) {
       return [baseFile, componentFile]
     }
   }
@@ -81,7 +94,7 @@ function getSideEffects(dirName: string, options: LimoUIResolverOptionsResolved)
  */
 function resolveComponent(
   name: string,
-  options: Required<LimoUIResolverOptions>,
+  options: Required<LimoUIResolverOptions>
 ): ComponentInfo | undefined {
   if (options.exclude && name.match(options.exclude)) return
 
@@ -101,13 +114,14 @@ function resolveComponent(
  */
 function resolveDirective(
   name: string,
-  options: Required<LimoUIResolverOptions>,
+  options: Required<LimoUIResolverOptions>
 ): ComponentInfo | undefined {
   if (!options.directives) return
 
-  const directives: Record<string, { importName: string; styleName: string }> = {
-    Tooltip: { importName: 'LmTooltipDirective', styleName: 'tooltip' },
-  }
+  const directives: Record<string, { importName: string; styleName: string }> =
+    {
+      Tooltip: { importName: 'LmTooltipDirective', styleName: 'tooltip' },
+    }
 
   const directive = directives[name]
   if (!directive) return
@@ -123,7 +137,7 @@ function resolveDirective(
  * Resolver for Limo UI
  */
 export function LimoUIResolver(
-  options: LimoUIResolverOptions = {},
+  options: LimoUIResolverOptions = {}
 ): ComponentResolver[] {
   const defaultOptions: Required<LimoUIResolverOptions> = {
     importStyle: 'css',

@@ -24,7 +24,6 @@ title: 开发流程及示例
 
 9. 组件库组件必须在 **typings/global.d.ts** 文件中手动添加组件引用
 
-
 ## 组件库开发注意点
 
 - 该库属于 **私有库**，npm 必须更改 **registry 地址** 为私有库地址，具体配置可在 **.npmrc** 文件中进行设置。
@@ -36,6 +35,7 @@ title: 开发流程及示例
 - 组件库推送时可使用脚本指令中的 **`pnpm run publish`**。提交前必须检查 **packages/limo-ui/package.json** 文件中的 **version** 版本号，确保版本号与私有库发布已有版本号不重复。
 
 - 组件库中的组件代码提示文件位于打包后的根目录下 **dist/limo-ui**，具体文件包括：
+
   - **web-types.json**
   - **tags.json**
   - **attributes.json**

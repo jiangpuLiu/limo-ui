@@ -15,23 +15,23 @@
 //.VPSidebar{
 //  padding-left: 40px !important;
 //}
-.VPDoc.has-aside .content-container{
+.VPDoc.has-aside .content-container {
   max-width: 100% !important;
   //background: rgba(255, 255, 255, 0.2);
   //backdrop-filter: blur(10px);
   //-webkit-backdrop-filter: blur(10px);
 }
-.VPHome{
+.VPHome {
   margin-bottom: unset !important;
 }
-.VPNav{
+.VPNav {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.VPContent{
-  padding-top: unset !important;
+.VPContent {
+  //padding-top: unset !important;
   //background-image: url('../../public/bg.png') !important; /* 替换为图片路径 */
   //background-size: cover !important; /* 背景图片按比例缩放，完全覆盖容器 */
   //background-position: center !important; /* 图片居中显示 */

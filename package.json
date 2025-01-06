@@ -7,11 +7,9 @@
     "docs"
   ],
   "scripts": {
-    "cz": "czg",
     "dev": "pnpm -C play dev",
-    "commit": "git add . && pnpm run cz",
+    "commit": "git add . && czg",
     "publish": "./scripts/publish.sh",
-    "update:version": "tsx scripts/update-version.ts",
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
     "clean:dist": "rimraf dist",
     "clean:node_modules": "bash ./scripts/clear-nodemodules.sh",

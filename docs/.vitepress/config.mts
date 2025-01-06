@@ -14,21 +14,21 @@ export default defineConfig({
   /* markdown 配置 */
   markdown: {
     lineNumbers: true,
-    config: (md) => mdPlugin(md)
+    config: (md) => mdPlugin(md),
   },
   themeConfig: {
     i18nRouting: false,
     nav,
     sidebar,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
     darkModeSwitchLabel: '外观',
     returnToTopLabel: '返回顶部',
 
     docFooter: {
       prev: '上一篇',
-      next: '下一篇'
-    }
-  }
+      next: '下一篇',
+    },
+  },
 })
