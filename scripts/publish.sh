@@ -11,7 +11,7 @@ pnpm build
 REGISTRY_URL="http://nexus.limonergy.com:8081/repository/limo-npm/"
 
 # 发布到指定的 registry
-cd ./dist/limo-ui
+cd ../dist/limo-ui
 npm publish --registry=$REGISTRY_URL
 cd -
 

@@ -1,4 +1,13 @@
-## API
+---
+title: Icon
+lang: en-US
+---
+
+# Icon
+
+Commonly used Icon.
+
+## Icon API
 
 ### Attributes
 
