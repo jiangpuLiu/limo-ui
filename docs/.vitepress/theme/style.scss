@@ -17,6 +17,9 @@
 //}
 .VPDoc.has-aside .content-container{
   max-width: 100% !important;
+  //background: rgba(255, 255, 255, 0.2);
+  //backdrop-filter: blur(10px);
+  //-webkit-backdrop-filter: blur(10px);
 }
 .VPHome{
   margin-bottom: unset !important;
@@ -29,4 +32,8 @@
 }
 .VPContent{
   padding-top: unset !important;
+  //background-image: url('../../public/bg.png') !important; /* 替换为图片路径 */
+  //background-size: cover !important; /* 背景图片按比例缩放，完全覆盖容器 */
+  //background-position: center !important; /* 图片居中显示 */
+  //background-repeat: no-repeat !important; /* 防止图片重复 */
 }

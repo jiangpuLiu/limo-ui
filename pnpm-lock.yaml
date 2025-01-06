@@ -179,6 +179,9 @@ importers:
       lucide-vue-next:
         specifier: ^0.469.0
         version: 0.469.0(vue@3.5.13(typescript@5.5.4))
+      mddir:
+        specifier: ^1.1.1
+        version: 1.1.1
       npm-run-all2:
         specifier: ^5.0.0
         version: 5.0.2
@@ -6631,6 +6634,11 @@ packages:
 
   mdast-util-to-string@2.0.0:
     resolution: {integrity: sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==}
+
+  mddir@1.1.1:
+    resolution: {integrity: sha512-VkBEnXdqoCTC5TLzuA8ITGgb3278sl2HQ9xWCEBK4viZXiyl9IzFRXQ+41x16Z9ODzVabSeRsPWGaD+KbigG6Q==}
+    engines: {node: '>=0.10.0'}
+    hasBin: true
 
   mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
@@ -16500,6 +16508,8 @@ snapshots:
       vfile: 6.0.3
 
   mdast-util-to-string@2.0.0: {}
+
+  mddir@1.1.1: {}
 
   mdn-data@2.0.28: {}
 

@@ -7,14 +7,10 @@
     "docs"
   ],
   "scripts": {
+    "cz": "czg",
+    "dev": "pnpm -C play dev",
     "commit": "git add . && pnpm run cz",
     "publish": "./scripts/publish.sh",
-    "cz": "czg",
-    "prepare:e2e": "if [ ! -d \"docs/.vitepress/dist\" ]; then pnpm run docs:build; fi;",
-    "dev": "pnpm -C play dev",
-    "gen": "bash ./scripts/gc.sh",
-    "gen:version": "tsx scripts/gen-version.ts",
-    "diff:table": "tsx scripts/build-table.ts",
     "update:version": "tsx scripts/update-version.ts",
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
     "clean:dist": "rimraf dist",
@@ -36,12 +32,9 @@
     "typecheck:vite-config": "vue-tsc -p tsconfig.vite-config.json --composite false --noEmit",
     "docs:dev": "pnpm run -C docs dev",
     "docs:build": "pnpm run -C docs build",
-    "docs:serve": "pnpm run -C docs serve",
-    "docs:gen-locale": "pnpm run -C docs gen-locale",
-    "docs:crowdin-credentials": "pnpm run -C docs crowdin-credentials",
     "stub": "pnpm run -r --parallel stub",
     "prepare": "husky",
-    "postinstall": "pnpm stub && concurrently \"pnpm gen:version\" \"pnpm run -C internal/metadata dev\""
+    "postinstall": "pnpm stub"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -104,6 +97,7 @@
     "limo-ui": "0.0.6",
     "lint-staged": "^13.0.3",
     "lucide-vue-next": "^0.469.0",
+    "mddir": "^1.1.1",
     "npm-run-all2": "^5.0.0",
     "prettier": "^2.7.1",
     "puppeteer": "^22.10.0",
