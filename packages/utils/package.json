@@ -27,7 +27,7 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@limo-ui/constants": "^0.0.1",
+    "@limo-ui/constants": "workspace:*",
     "@vue/shared": "^3.2.0",
     "@vueuse/core": "^9.1.0",
     "lodash": "^4.17.21",

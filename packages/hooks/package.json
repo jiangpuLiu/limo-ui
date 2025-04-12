@@ -25,8 +25,8 @@
   },
   "dependencies": {
     "@floating-ui/dom": "^1.0.1",
-    "@limo-ui/constants": "^0.0.1",
-    "@limo-ui/utils": "^0.0.1",
+    "@limo-ui/constants": "workspace:*",
+    "@limo-ui/utils": "workspace:*",
     "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7",
     "@vueuse/core": "^9.1.0",
     "lodash": "^4.17.21",

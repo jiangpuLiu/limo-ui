@@ -22,8 +22,8 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@limo-ui/constants": "^0.0.1",
-    "@limo-ui/utils": "^0.0.1",
+    "@limo-ui/constants": "workspace:*",
+    "@limo-ui/utils": "workspace:*",
     "@vueuse/core": "^9.1.0",
     "normalize-wheel-es": "^1.2.0",
     "vue": "^3.2.0"
