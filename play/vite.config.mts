@@ -8,6 +8,8 @@ import Inspect from 'vite-plugin-inspect'
 import mkcert from 'vite-plugin-mkcert'
 import glob from 'fast-glob'
 import VueMacros from 'unplugin-vue-macros/vite'
+import UnoCSS from 'unocss/vite'
+import { VxeResolver, lazyImport } from 'vite-plugin-lazy-import'
 import {
   epPackage,
   epRoot,
@@ -54,6 +56,17 @@ export default defineConfig(async ({ mode }) => {
       sourcemap: true,
     },
     plugins: [
+      lazyImport({
+        resolvers: [
+          VxeResolver({
+            libraryName: 'vxe-table',
+          }),
+          VxeResolver({
+            libraryName: 'vxe-pc-ui',
+          }),
+        ],
+      }),
+      UnoCSS(),
       VueMacros({
         setupComponent: false,
         setupSFC: false,
