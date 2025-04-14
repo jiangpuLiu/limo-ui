@@ -30,7 +30,6 @@
     "markdown-it-container": "^3.0.0",
     "prismjs": "^1.28.0",
     "unocss": "66.1.0-beta.11",
-    "vite-plugin-lazy-import": "^1.0.7",
     "vitepress": "1.3.2"
   }
 }
