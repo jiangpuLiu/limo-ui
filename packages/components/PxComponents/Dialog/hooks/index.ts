@@ -6,7 +6,6 @@ const usePxDialog = ({ outTip, preData, upData, emits }: PxDialogHooks) => {
    * 点击右上角关闭，或者点击Dialog以外的位置关闭Dialog
    */
   const closed = () => {
-    console.log('closed')
     if (outTip) {
       outTipDialog(preData, upData, () => {
         emits('closed')
@@ -19,7 +18,6 @@ const usePxDialog = ({ outTip, preData, upData, emits }: PxDialogHooks) => {
    * 取消
    */
   function cancel() {
-    console.log('cancel')
     if (outTip) {
       outTipDialog(preData, upData, () => {
         emits('cancel')
