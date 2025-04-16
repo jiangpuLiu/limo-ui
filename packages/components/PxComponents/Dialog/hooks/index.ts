@@ -30,7 +30,6 @@ const usePxDialog = ({ outTip, preData, upData, emits }: PxDialogHooks) => {
    * 保存
    */
   function confirm() {
-    console.log('confirm')
     emits('confirm')
   }
 

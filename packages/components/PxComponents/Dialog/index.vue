@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { defineEmits, defineProps, ref, withDefaults } from 'vue'
 import { ElButton, ElDialog } from 'element-plus'
 import usePxDialog from './hooks'
 import type { PxDialogEmits, PxDialogProps } from './types'

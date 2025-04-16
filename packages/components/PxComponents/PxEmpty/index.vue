@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defineProps, withDefaults } from 'vue'
 import { ElEmpty } from 'element-plus'
 import type { EmptyProps } from './types'
 defineOptions({
