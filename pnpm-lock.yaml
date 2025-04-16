@@ -210,7 +210,7 @@ importers:
         specifier: ~5.5.4
         version: 5.5.4
       unplugin-vue-macros:
-        specifier: ^2.7.11
+        specifier: ^2.14.5
         version: 2.14.5(@vueuse/core@9.1.0(vue@3.5.13(typescript@5.5.4)))(esbuild@0.25.2)(rollup@4.39.0)(typescript@5.5.4)(vue-tsc@2.2.8(typescript@5.5.4))(vue@3.5.13(typescript@5.5.4))
       vue:
         specifier: ^3.2.37
@@ -12507,7 +12507,7 @@ snapshots:
       vue-demi: 0.14.10(vue@3.5.13(typescript@5.5.4))
     optionalDependencies:
       async-validator: 4.2.5(patch_hash=wdmp4xlpil2odxo3rasjmxbdfm)
-      axios: 1.8.4
+      axios: 1.8.4(debug@4.4.0)
       focus-trap: 7.6.4
       nprogress: 0.2.0
     transitivePeerDependencies:
@@ -13006,15 +13006,6 @@ snapshots:
   aws-sign2@0.7.0: {}
 
   aws4@1.13.2: {}
-
-  axios@1.8.4:
-    dependencies:
-      follow-redirects: 1.15.9
-      form-data: 4.0.2
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-    optional: true
 
   axios@1.8.4(debug@4.4.0):
     dependencies:
@@ -14930,9 +14921,6 @@ snapshots:
   focus-trap@7.6.4:
     dependencies:
       tabbable: 6.2.0
-
-  follow-redirects@1.15.9:
-    optional: true
 
   follow-redirects@1.15.9(debug@4.4.0):
     optionalDependencies:
